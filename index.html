@@ -1,0 +1,1388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commerce Amplified — Affiliate &amp; Partnerships Consultancy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* --- CAm. Redesign --- */
+:root {
+  --ink: #1A1614;
+  --ink-2: #2B2622;
+  --ink-3: #514944;
+  --ink-4: #8A807A;
+  --ink-5: #BAB0A8;
+  --line: #E8E1D8;
+  --line-2: #D9D0C4;
+  --bg: #F5F1EB;
+  --bg-2: #EDE6DA;
+  --paper: #FBF8F3;
+  --white: #FFFFFF;
+  --accent: oklch(0.55 0.11 35);
+  --accent-soft: oklch(0.94 0.04 35);
+  --accent-ink: oklch(0.30 0.09 35);
+  --shadow-sm: 0 1px 2px rgba(26,22,20,0.04), 0 1px 1px rgba(26,22,20,0.03);
+  --shadow-md: 0 4px 16px -4px rgba(26,22,20,0.08), 0 2px 6px -2px rgba(26,22,20,0.05);
+  --shadow-lg: 0 24px 60px -20px rgba(26,22,20,0.18), 0 8px 24px -8px rgba(26,22,20,0.08);
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+  --maxw: 1240px;
+  --pad: 32px;
+}
+
+[data-bgtone="paper"] { --bg: #FBF8F3; --bg-2: #F2EDE3; --paper: #FFFFFF; }
+[data-bgtone="ink"] {
+  --bg: #14110F; --bg-2: #1E1A17; --paper: #1A1614;
+  --ink: #F5F1EB; --ink-2: #E8E1D8; --ink-3: #BAB0A8;
+  --ink-4: #8A807A; --ink-5: #514944;
+  --line: #2B2622; --line-2: #3A332E; --white: #1A1614;
+}
+[data-density="compact"] { --pad: 24px; }
+[data-density="airy"] { --pad: 48px; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px; line-height: 1.5; color: var(--ink); background: var(--bg);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11"; text-rendering: optimizeLegibility;
+}
+.serif { font-family: var(--display-font, 'Instrument Serif'), 'Times New Roman', serif; font-weight: 400; letter-spacing: -0.01em; }
+.mono { font-family: 'Geist Mono', ui-monospace, monospace; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+.wrap-narrow { max-width: 920px; margin: 0 auto; padding: 0 var(--pad); }
+
+.eyebrow { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+.eyebrow-dot::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 10px; vertical-align: middle; transform: translateY(-1px); }
+
+h1, h2, h3 { margin: 0; font-weight: 400; letter-spacing: -0.02em; line-height: 1.05; }
+.h-display { font-family: var(--display-font, 'Instrument Serif'), serif; font-size: clamp(56px, 9vw, 132px); line-height: 0.96; letter-spacing: -0.025em; }
+.h-1 { font-family: var(--display-font, 'Instrument Serif'), serif; font-size: clamp(40px, 5.5vw, 72px); line-height: 1.02; letter-spacing: -0.02em; }
+.h-2 { font-family: var(--display-font, 'Instrument Serif'), serif; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; }
+.h-3 { font-size: 22px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; }
+.italic { font-style: italic; }
+p { margin: 0; }
+.lead { font-size: 19px; line-height: 1.5; color: var(--ink-2); max-width: 60ch; }
+.body { color: var(--ink-2); }
+.muted { color: var(--ink-3); }
+.dim { color: var(--ink-4); }
+
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border-radius: 999px; border: 1px solid transparent; font-size: 15px; font-weight: 500; transition: transform 0.18s ease, background 0.2s, color 0.2s, border-color 0.2s; white-space: nowrap; }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--ink); color: var(--bg); }
+.btn-primary:hover { background: var(--ink-2); }
+.btn-accent { background: var(--accent); color: white; }
+.btn-accent:hover { filter: brightness(1.05); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-2); }
+.btn-ghost:hover { background: var(--paper); }
+.btn-sm { padding: 9px 16px; font-size: 13px; }
+.btn-lg { padding: 18px 28px; font-size: 16px; }
+
+section { position: relative; }
+.section { padding: clamp(80px, 12vw, 160px) 0; }
+.section-tight { padding: clamp(60px, 8vw, 96px) 0; }
+.section-divider { border-top: 1px solid var(--line); }
+.section-title-row { display: flex; justify-content: space-between; align-items: baseline; gap: 32px; margin-bottom: 64px; flex-wrap: wrap; }
+
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 32px; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s; }
+.card-hover:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--line-2); }
+
+.cam-header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(16px); -webkit-backdrop-filter: saturate(140%) blur(16px); background: color-mix(in oklab, var(--bg) 78%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--line) 60%, transparent); }
+.cam-header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.cam-logo { display: inline-flex; align-items: baseline; gap: 2px; font-family: var(--display-font); font-size: 26px; letter-spacing: -0.02em; }
+.cam-logo .dot { color: var(--accent); }
+.cam-nav { display: flex; gap: 32px; align-items: center; }
+.cam-nav a { font-size: 14px; color: var(--ink-2); }
+.cam-nav a:hover { color: var(--ink); }
+
+.hero { padding-top: 80px; padding-bottom: 0; }
+.hero-marquee { display: flex; gap: 56px; align-items: center; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent); }
+.hero-marquee-track { display: flex; gap: 56px; align-items: center; animation: marquee 40s linear infinite; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.logo-chip { font-family: var(--display-font); font-size: 22px; color: var(--ink-3); letter-spacing: -0.01em; white-space: nowrap; padding: 0 4px; font-style: italic; }
+
+.path-picker { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; background: var(--paper); border: 1px solid var(--line); padding: 8px; border-radius: var(--r-xl); }
+.path-card { position: relative; padding: 24px; border-radius: var(--r-lg); text-align: left; background: transparent; border: 0; cursor: pointer; transition: background 0.2s; color: var(--ink); }
+.path-card:hover { background: var(--bg-2); }
+.path-card.active { background: var(--ink); color: var(--bg); }
+.path-card .pc-num { font-family: 'Geist Mono', monospace; font-size: 11px; opacity: 0.55; letter-spacing: 0.1em; }
+.path-card .pc-title { font-family: var(--display-font); font-size: 30px; margin-top: 24px; line-height: 1; }
+.path-card .pc-sub { margin-top: 10px; font-size: 13px; opacity: 0.7; max-width: 30ch; }
+.path-card .pc-arrow { position: absolute; top: 24px; right: 24px; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--bg-2); color: var(--ink); transition: all 0.2s; }
+.path-card.active .pc-arrow { background: var(--accent); color: white; transform: rotate(-45deg); }
+
+.svc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.svc-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-xl); padding: 40px; position: relative; overflow: hidden; min-height: 360px; display: flex; flex-direction: column; justify-content: space-between; }
+.svc-card.feature { grid-column: 1 / -1; min-height: 480px; background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.svc-num { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--ink-4); letter-spacing: 0.14em; }
+.svc-card.feature .svc-num { color: var(--ink-5); }
+.svc-title { font-family: var(--display-font); font-size: 44px; line-height: 0.98; margin-top: 16px; }
+.svc-card.feature .svc-title { font-size: 64px; }
+.svc-desc { color: var(--ink-3); margin-top: 16px; max-width: 48ch; }
+.svc-card.feature .svc-desc { color: var(--ink-5); }
+.svc-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.svc-tag { font-size: 12px; padding: 6px 12px; border-radius: 999px; background: var(--bg-2); color: var(--ink-2); }
+.svc-card.feature .svc-tag { background: rgba(255,255,255,0.08); color: var(--bg); }
+
+.metric-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.metric { padding: 32px 24px; border-right: 1px solid var(--line); }
+.metric:last-child { border-right: 0; }
+.metric-num { font-family: var(--display-font); font-size: clamp(48px, 6vw, 84px); line-height: 1; letter-spacing: -0.03em; }
+.metric-label { font-size: 13px; color: var(--ink-3); margin-top: 12px; max-width: 24ch; }
+
+.case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.case-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-xl); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease; cursor: pointer; }
+.case-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.case-art { aspect-ratio: 4/3; position: relative; overflow: hidden; }
+.case-meta { padding: 24px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.case-tagrow { display: flex; gap: 6px; flex-wrap: wrap; }
+.case-tag { font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); padding: 4px 10px; border: 1px solid var(--line-2); border-radius: 999px; }
+.case-title { font-family: var(--display-font); font-size: 26px; line-height: 1.1; }
+.case-result { display: flex; gap: 24px; margin-top: 12px; padding-top: 16px; border-top: 1px solid var(--line); }
+.case-result-num { font-family: var(--display-font); font-size: 26px; line-height: 1; }
+.case-result-lbl { font-size: 11px; color: var(--ink-4); margin-top: 4px; letter-spacing: 0.04em; }
+
+.art-stripe-warm { background: repeating-linear-gradient(135deg, oklch(0.86 0.06 50) 0 24px, oklch(0.82 0.07 45) 24px 48px); }
+.art-stripe-cool { background: repeating-linear-gradient(135deg, oklch(0.82 0.04 220) 0 24px, oklch(0.78 0.05 215) 24px 48px); }
+.art-stripe-ink { background: var(--ink); background-image: radial-gradient(circle at 30% 30%, oklch(0.35 0.05 35) 0%, transparent 55%), radial-gradient(circle at 80% 70%, oklch(0.28 0.04 35) 0%, transparent 60%); }
+.art-stripe-sage { background: repeating-linear-gradient(135deg, oklch(0.82 0.04 145) 0 24px, oklch(0.78 0.05 140) 24px 48px); }
+.art-stripe-clay { background: repeating-linear-gradient(135deg, oklch(0.78 0.08 35) 0 24px, oklch(0.74 0.09 30) 24px 48px); }
+.art-stripe-paper { background: repeating-linear-gradient(135deg, oklch(0.92 0.02 60) 0 24px, oklch(0.88 0.03 55) 24px 48px); }
+.art-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; color: white; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.35) 100%); }
+.art-overlay-light { color: var(--ink); background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.05) 100%); }
+.art-brand { font-family: var(--display-font); font-size: 28px; line-height: 1; opacity: 0.9; }
+.art-stat { font-family: var(--display-font); font-size: 56px; line-height: 1; letter-spacing: -0.02em; }
+
+.tool-shell { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-xl); overflow: hidden; }
+.tool-head { display: flex; justify-content: space-between; align-items: center; padding: 20px 28px; border-bottom: 1px solid var(--line); background: color-mix(in oklab, var(--bg-2) 50%, transparent); }
+.tool-head .left { display: flex; gap: 14px; align-items: center; }
+.tool-pill { font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; background: var(--accent-soft); color: var(--accent-ink); padding: 5px 10px; border-radius: 999px; text-transform: uppercase; }
+.tool-progress { height: 4px; background: var(--bg-2); position: relative; overflow: hidden; }
+.tool-progress > div { height: 100%; background: var(--accent); transition: width 0.4s cubic-bezier(.6,.15,.2,1); }
+.tool-body { padding: 48px 56px; min-height: 380px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; }
+.tool-foot { display: flex; justify-content: space-between; align-items: center; padding: 20px 28px; border-top: 1px solid var(--line); }
+.q-step-label { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; }
+.q-text { font-family: var(--display-font); font-size: clamp(28px, 3vw, 40px); line-height: 1.1; max-width: 22ch; margin-top: 14px; }
+.q-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.q-opt { text-align: left; padding: 18px 20px; border: 1px solid var(--line-2); border-radius: var(--r-md); background: transparent; color: var(--ink); font-size: 15px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: background 0.15s, border-color 0.15s, transform 0.1s; }
+.q-opt:hover { background: var(--bg-2); border-color: var(--ink-4); }
+.q-opt.selected { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.q-opt-mark { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--ink-4); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.q-opt.selected .q-opt-mark { background: var(--bg); border-color: var(--bg); }
+.q-opt.selected .q-opt-mark::after { content: ""; width: 7px; height: 7px; background: var(--ink); border-radius: 50%; }
+
+.score-ring { width: 240px; height: 240px; position: relative; display: flex; align-items: center; justify-content: center; }
+.score-ring svg { transform: rotate(-90deg); }
+.score-ring .ring-bg { stroke: var(--line); }
+.score-ring .ring-fg { stroke: var(--accent); transition: stroke-dashoffset 1.2s cubic-bezier(.6,.15,.2,1); }
+.score-num { position: absolute; font-family: var(--display-font); font-size: 96px; line-height: 1; }
+.score-num small { font-size: 32px; color: var(--ink-3); }
+.score-grade { display: inline-block; padding: 4px 12px; border-radius: 999px; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.breakdown-row { display: grid; grid-template-columns: 200px 1fr 60px; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.bar-track { height: 6px; background: var(--bg-2); border-radius: 999px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--ink); transition: width 1s cubic-bezier(.6,.15,.2,1); }
+.bar-fill.warn { background: oklch(0.65 0.13 60); }
+.bar-fill.bad { background: oklch(0.55 0.16 28); }
+
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.calc-inputs { padding: 48px; border-right: 1px solid var(--line); }
+.calc-output { padding: 48px; background: var(--ink); color: var(--bg); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
+.input-group { margin-bottom: 36px; }
+.input-label { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+.input-label-text { font-size: 14px; color: var(--ink-2); }
+.input-value { font-family: var(--display-font); font-size: 28px; line-height: 1; }
+.input-help { font-size: 12px; color: var(--ink-4); margin-top: 8px; }
+input[type="range"].slider { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; background: var(--line-2); border-radius: 999px; outline: none; }
+input[type="range"].slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; background: var(--ink); border: 3px solid var(--bg); border-radius: 50%; box-shadow: var(--shadow-md); cursor: grab; }
+input[type="range"].slider::-moz-range-thumb { width: 22px; height: 22px; background: var(--ink); border: 3px solid var(--bg); border-radius: 50%; cursor: grab; }
+.seg { display: inline-flex; padding: 4px; background: var(--bg-2); border-radius: 999px; border: 1px solid var(--line); }
+.seg button { border: 0; background: transparent; padding: 8px 16px; border-radius: 999px; font-size: 13px; color: var(--ink-3); transition: all 0.18s; }
+.seg button.active { background: var(--paper); color: var(--ink); box-shadow: var(--shadow-sm); }
+.calc-out-num { font-family: var(--display-font); font-size: clamp(56px, 7vw, 96px); line-height: 1; letter-spacing: -0.025em; }
+.calc-out-currency { font-size: 0.55em; vertical-align: top; opacity: 0.7; margin-right: 4px; }
+.calc-out-mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); }
+.calc-out-mini > div .lbl { font-size: 11px; opacity: 0.55; letter-spacing: 0.1em; text-transform: uppercase; }
+.calc-out-mini > div .val { font-family: var(--display-font); font-size: 28px; line-height: 1.1; margin-top: 6px; }
+
+.insight-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
+.insight-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-xl); padding: 32px; display: flex; flex-direction: column; justify-content: space-between; min-height: 320px; transition: all 0.2s; }
+.insight-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.insight-card.feature { grid-column: span 6; min-height: 460px; background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.insight-card.s { grid-column: span 6; }
+.insight-card.m { grid-column: span 6; }
+.insight-tag { font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+.insight-card.feature .insight-tag { color: var(--ink-5); }
+.insight-h { font-family: var(--display-font); font-size: 32px; line-height: 1.05; margin-top: 16px; }
+.insight-card.feature .insight-h { font-size: 48px; }
+.insight-meta { display: flex; gap: 12px; align-items: center; margin-top: 24px; font-size: 13px; color: var(--ink-3); }
+.insight-card.feature .insight-meta { color: var(--ink-5); }
+
+.team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.team-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-xl); overflow: hidden; }
+.team-portrait { aspect-ratio: 4/5; position: relative; }
+.team-portrait .ph-label { position: absolute; bottom: 16px; left: 16px; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: rgba(255,255,255,0.6); text-transform: uppercase; }
+.team-info { padding: 28px; }
+.team-name { font-family: var(--display-font); font-size: 36px; line-height: 1; }
+.team-role { font-size: 13px; color: var(--ink-3); margin-top: 6px; letter-spacing: 0.04em; }
+.team-bio { color: var(--ink-2); margin-top: 16px; font-size: 15px; }
+
+.book-grid { display: grid; grid-template-columns: 380px 1fr; gap: 0; min-height: 540px; }
+.book-side { padding: 40px; border-right: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between; }
+.book-stage { padding: 40px; }
+.book-step-row { display: flex; gap: 12px; align-items: center; padding: 12px 0; }
+.book-step-num { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line-2); display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--ink-3); }
+.book-step.done .book-step-num { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.book-step.active .book-step-num { background: var(--accent); color: white; border-color: var(--accent); }
+.book-step-label { font-size: 14px; color: var(--ink-3); }
+.book-step.active .book-step-label, .book-step.done .book-step-label { color: var(--ink); }
+.book-summary { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; }
+.book-summary .row { display: flex; justify-content: space-between; padding: 6px 0; color: var(--ink-3); }
+.book-summary .row span:last-child { color: var(--ink); }
+
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.cal-day-h { font-family: 'Geist Mono', monospace; font-size: 10px; color: var(--ink-4); padding: 8px 0; text-align: center; letter-spacing: 0.1em; text-transform: uppercase; }
+.cal-day { aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; font-size: 14px; border-radius: var(--r-sm); border: 1px solid transparent; cursor: pointer; transition: all 0.15s; }
+.cal-day.outside { color: var(--ink-5); }
+.cal-day.disabled { color: var(--ink-5); cursor: not-allowed; }
+.cal-day.available:hover { background: var(--bg-2); border-color: var(--line-2); }
+.cal-day.selected { background: var(--ink); color: var(--bg); }
+.cal-day.today { font-weight: 600; }
+.slot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-height: 260px; overflow-y: auto; }
+.slot-btn { padding: 12px; border: 1px solid var(--line-2); background: transparent; color: var(--ink); border-radius: var(--r-sm); font-size: 14px; font-family: 'Geist Mono', monospace; transition: all 0.15s; }
+.slot-btn:hover { border-color: var(--ink); }
+.slot-btn.selected { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 12px; color: var(--ink-3); margin-bottom: 6px; font-family: 'Geist Mono', monospace; letter-spacing: 0.04em; text-transform: uppercase; }
+.field input, .field select, .field textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--line-2); border-radius: var(--r-md); background: var(--paper); color: var(--ink); font-family: inherit; font-size: 15px; transition: border-color 0.15s, box-shadow 0.15s; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 4px color-mix(in oklab, var(--ink) 8%, transparent); }
+
+.playbook-card { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-xl); overflow: hidden; }
+.playbook-content { padding: 56px 48px; }
+.playbook-cover { background: linear-gradient(160deg, oklch(0.55 0.11 35) 0%, oklch(0.42 0.10 25) 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; color: white; min-height: 480px; }
+.playbook-spine { position: absolute; width: 12px; left: 0; top: 0; bottom: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.05)); }
+.playbook-doc { width: 78%; aspect-ratio: 3/4; background: var(--paper); color: var(--ink); border-radius: 4px; padding: 28px; box-shadow: var(--shadow-lg); transform: rotate(-3deg) translateY(8px); position: relative; }
+.playbook-doc h4 { font-family: var(--display-font); font-size: 28px; line-height: 1; margin: 0; }
+.playbook-doc .pb-eyebrow { font-family: 'Geist Mono', monospace; font-size: 10px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; }
+.playbook-doc .pb-rules { margin-top: 32px; }
+.playbook-doc .pb-rules > div { height: 8px; background: var(--bg-2); border-radius: 2px; margin-bottom: 8px; }
+.playbook-doc .pb-rules > div:nth-child(2) { width: 85%; }
+.playbook-doc .pb-rules > div:nth-child(3) { width: 70%; }
+.playbook-doc .pb-rules > div:nth-child(4) { width: 92%; }
+.playbook-doc .pb-rules > div:nth-child(5) { width: 60%; }
+
+.cam-footer { background: var(--ink); color: var(--bg); padding: 96px 0 32px; margin-top: 0; }
+.cam-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 64px; border-bottom: 1px solid color-mix(in oklab, var(--bg) 12%, transparent); }
+.cam-footer h4 { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--ink-5); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; margin-bottom: 16px; }
+.cam-footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.cam-footer ul a { color: var(--ink-3); font-size: 14px; }
+.cam-footer ul a:hover { color: var(--bg); }
+.cam-footer-mega { font-family: var(--display-font); font-size: clamp(80px, 14vw, 220px); line-height: 0.8; margin: 64px 0 32px; letter-spacing: -0.04em; color: var(--bg); white-space: nowrap; }
+.cam-footer-bot { display: flex; justify-content: space-between; padding-top: 24px; font-size: 12px; color: var(--ink-4); flex-wrap: wrap; gap: 16px; }
+
+.kbd { font-family: 'Geist Mono', monospace; font-size: 11px; padding: 2px 6px; border: 1px solid var(--line-2); border-radius: 4px; color: var(--ink-3); background: var(--paper); }
+.fade-in { animation: fadeIn 0.5s ease both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.divider-dot { color: var(--ink-5); margin: 0 10px; }
+
+@media (max-width: 1024px) {
+  .svc-row, .case-grid, .calc-grid, .book-grid, .playbook-card, .insight-grid, .team-grid { grid-template-columns: 1fr; }
+  .insight-card.feature, .insight-card.s, .insight-card.m { grid-column: span 1; }
+  .calc-inputs { border-right: 0; border-bottom: 1px solid var(--line); }
+  .book-side { border-right: 0; border-bottom: 1px solid var(--line); }
+  .metric-row { grid-template-columns: repeat(2, 1fr); }
+  .metric:nth-child(2) { border-right: 0; }
+  .metric:nth-child(1), .metric:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .path-picker { grid-template-columns: 1fr; }
+  .q-options { grid-template-columns: 1fr; }
+  .cam-nav { display: none; }
+}
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+window.CAM_TWEAKS = { "accentHue": 35, "accentSat": 0.11, "bgTone": "cream", "displayFont": "Instrument Serif", "density": "comfortable", "showHero": true };
+</script>
+
+<!-- Icons -->
+<script type="text/babel">
+const Icon = {
+  Arrow: ({size=16}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 12h14M13 5l7 7-7 7"/>
+    </svg>
+  ),
+  ArrowUR: ({size=16}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M7 17L17 7M9 7h8v8"/>
+    </svg>
+  ),
+  Check: ({size=16}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 6L9 17l-5-5"/>
+    </svg>
+  ),
+  ChevL: ({size=16}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M15 18l-6-6 6-6"/>
+    </svg>
+  ),
+  ChevR: ({size=16}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 6l6 6-6 6"/>
+    </svg>
+  ),
+  Download: ({size=16}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 3v13M6 11l6 6 6-6M4 21h16"/>
+    </svg>
+  ),
+  Sparkle: ({size=16}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/>
+    </svg>
+  ),
+  Calendar: ({size=16}) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="5" width="18" height="16" rx="2"/>
+      <path d="M3 10h18M8 3v4M16 3v4"/>
+    </svg>
+  ),
+};
+window.Icon = Icon;
+</script>
+
+<!-- Shell: Header + Section -->
+<script type="text/babel">
+function Header({ active, onNav }) {
+  const links = [
+    { id: 'services', label: 'Services' },
+    { id: 'cases', label: 'Case Studies' },
+    { id: 'tools', label: 'Tools' },
+    { id: 'insights', label: 'Insights' },
+    { id: 'team', label: 'Team' },
+  ];
+  return (
+    <header className="cam-header">
+      <div className="wrap cam-header-inner">
+        <a href="#top" className="cam-logo" onClick={(e)=>{e.preventDefault(); onNav('top');}}>
+          CAm<span className="dot">.</span>
+        </a>
+        <nav className="cam-nav">
+          {links.map(l => (
+            <a key={l.id} href={`#${l.id}`} onClick={(e)=>{e.preventDefault(); onNav(l.id);}}>{l.label}</a>
+          ))}
+          <a href="#book" onClick={(e)=>{e.preventDefault(); onNav('book');}} className="btn btn-sm btn-primary">
+            Book a call
+            <Icon.Arrow size={14}/>
+          </a>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function Section({ id, children, className='', title, eyebrow, intro, action }) {
+  return (
+    <section id={id} className={`section ${className}`}>
+      <div className="wrap">
+        {(title || eyebrow) && (
+          <div className="section-title-row">
+            <div>
+              {eyebrow && <div className="eyebrow eyebrow-dot">{eyebrow}</div>}
+              {title && <h2 className="h-1 serif" style={{marginTop: eyebrow ? 18 : 0, maxWidth: '20ch'}}>{title}</h2>}
+              {intro && <p className="lead" style={{marginTop: 24}}>{intro}</p>}
+            </div>
+            {action && <div>{action}</div>}
+          </div>
+        )}
+        {children}
+      </div>
+    </section>
+  );
+}
+window.Header = Header;
+window.Section = Section;
+</script>
+
+<!-- Hero -->
+<script type="text/babel">
+function Hero({ audience, setAudience }) {
+  const audCopy = {
+    brand: { headline: ["Affiliate growth,", <em key="i"> engineered</em>, " for ambitious brands."],
+             sub: "Programs that move from vanity revenue to incremental commerce. We design, run and optimise affiliate channels for in-house and agency teams across ANZ." },
+    partner: { headline: ["Monetise traffic", " with ", <em key="i">premium brands</em>, "."],
+              sub: "We open commercial doors. Our publisher network connects you to ANZ's best advertisers, with the negotiation muscle to make the rate-card work for you." },
+    agency: { headline: ["The affiliate", " arm of your", <em key="i"> agency</em>, "."],
+              sub: "White-labelled affiliate execution that complements your performance offering. Plug-and-play expertise, no headcount, no agency politics." },
+    default: { headline: ["A partnerships", " ", <em key="i">centre of excellence</em>, "."],
+               sub: "Commerce Amplified is the affiliate consultancy ANZ brands, publishers and agencies trust to design, scale and optimise commerce partnerships." },
+  };
+  const c = audCopy[audience] || audCopy.default;
+  const brands = ['Sony','Southern Cross Travel','Pay.com.au','Money.com.au','Safewill','NatV','Flexiroam','Next&Co','This is Flow','Dog Friendly Co','Zyft','Linkby'];
+
+  const safeNav = (id) => {
+    const el = id === 'top' ? document.body : document.getElementById(id);
+    if (!el) return;
+    const y = id === 'top' ? 0 : el.getBoundingClientRect().top + window.scrollY - 64;
+    window.scrollTo({top: y, behavior:'smooth'});
+  };
+
+  return (
+    <section id="top" className="hero">
+      <div className="wrap" style={{paddingTop: 64, paddingBottom: 80}}>
+        <div className="eyebrow eyebrow-dot" style={{marginBottom: 28}}>Affiliate · Partnerships · ANZ</div>
+        <h1 className="h-display serif" style={{maxWidth: '14ch'}}>{c.headline}</h1>
+        <p className="lead" style={{marginTop: 32, fontSize: 22, maxWidth: '54ch'}}>{c.sub}</p>
+
+        <div style={{display:'flex', gap:12, marginTop: 40, flexWrap:'wrap'}}>
+          <a href="#tools" className="btn btn-lg btn-primary" onClick={(e)=>{e.preventDefault(); safeNav('tools');}}>
+            Run the Health Check
+            <Icon.Arrow size={16}/>
+          </a>
+          <a href="#book" className="btn btn-lg btn-ghost" onClick={(e)=>{e.preventDefault(); safeNav('book');}}>Book a 30-min call</a>
+        </div>
+
+        <div style={{marginTop: 96}}>
+          <div className="eyebrow" style={{marginBottom: 16}}>Tell us who you are — we'll personalise the rest</div>
+          <div className="path-picker">
+            {[
+              { id:'brand', num:'01', title:'I\'m a Brand', sub:'Establishing, managing or scaling an affiliate program.' },
+              { id:'partner', num:'02', title:'I\'m a Partner', sub:'A publisher monetising traffic via affiliate.' },
+              { id:'agency', num:'03', title:'I\'m an Agency', sub:'Need affiliate expertise to round out performance.' },
+            ].map(p => (
+              <button key={p.id} className={`path-card ${audience===p.id?'active':''}`} onClick={()=>setAudience(p.id)}>
+                <div className="pc-num">{p.num} ·</div>
+                <div className="pc-title serif">{p.title}</div>
+                <div className="pc-sub">{p.sub}</div>
+                <div className="pc-arrow"><Icon.ArrowUR size={14}/></div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="hero-marquee">
+        <div className="hero-marquee-track">
+          {[...brands, ...brands].map((b,i)=> (
+            <span key={i} className="logo-chip">{b}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+window.Hero = Hero;
+</script>
+
+<!-- Services -->
+<script type="text/babel">
+function Services({ audience }) {
+  const services = {
+    brand: [
+      { num: '01', title: 'Program Audit', desc: 'A 6-week deep dive into your affiliate program — partner mix, commission structure, fraud exposure, incrementality. You get a board-ready remediation plan.', tags: ['6 weeks', 'Fixed fee', 'Board-ready'] },
+      { num: '02', title: 'Program Build', desc: 'End-to-end set-up: network selection, contract negotiation, tracking, partner recruitment, terms & conditions. Live in 90 days.', tags: ['90 days to live', 'Network agnostic'] },
+      { num: '03', title: 'Managed Service', desc: 'Ongoing program management. Weekly partner outreach, monthly board reporting, quarterly strategy. We become your affiliate team.', tags: ['Retainer', 'Quarterly OKRs'] },
+    ],
+    partner: [
+      { num: '01', title: 'Monetisation Diagnostic', desc: 'We audit your existing traffic, content surfaces and inventory. Output: a ranked list of 15+ brand partnerships ready for activation, with realistic CPA / commission ranges.', tags: ['2 weeks', 'Fixed fee'] },
+      { num: '02', title: 'Brand Introductions', desc: 'Warm intros to in-market advertisers. Our relationships across Australian and global brands compress months of cold outreach into days.', tags: ['Network', 'Warm intros'] },
+      { num: '03', title: 'Commercial Negotiation', desc: 'We negotiate placement fees, CPA, hybrid deals on your behalf. Partners typically see 25–40% rate uplift in the first round.', tags: ['Per-deal', 'Success fee'] },
+    ],
+    agency: [
+      { num: '01', title: 'White-Label Execution', desc: 'You sell the work. We deliver. Branded as your team, working to your processes — affiliate becomes a margin-positive line item without headcount risk.', tags: ['White-label', 'Per-client'] },
+      { num: '02', title: 'New Business Pitching', desc: 'We co-author affiliate sections of pitches and decks. Win rates lift, and you don\'t have to fake the expertise.', tags: ['Pre-sales', 'Project'] },
+      { num: '03', title: 'Training & Enablement', desc: 'Workshops, playbooks and live shadowing for your performance team. By the end of the quarter, your account managers can run affiliate cold.', tags: ['1 quarter', 'Fixed scope'] },
+    ],
+    default: [
+      { num: '01', title: 'For Brands', desc: 'Audit, build and operate the affiliate channel — from network selection through quarterly board reporting.', tags: ['Audit', 'Build', 'Manage'] },
+      { num: '02', title: 'For Partners', desc: 'Diagnose monetisation gaps, open commercial doors, negotiate harder rate-cards.', tags: ['Diagnose', 'Introduce', 'Negotiate'] },
+      { num: '03', title: 'For Agencies', desc: 'White-label execution, pitch support and team training that adds affiliate to your performance offer.', tags: ['Execute', 'Pitch', 'Train'] },
+    ],
+  };
+  const list = services[audience] || services.default;
+  const featureCopy = ({
+    brand: { eyebrow: 'Flagship engagement', title: 'Incrementality Audit', desc: 'A defensible, evidence-led answer to "is my affiliate program actually driving incremental sales?" — using cohort holdouts, baseline modelling and partner-level attribution forensics. Most engagements identify 30–55% of program spend that can be redirected.', tags: ['8–10 weeks','From AU$48k','Board-ready'] },
+    partner: { eyebrow: 'Flagship engagement', title: 'Yield Optimisation Sprint', desc: 'A 90-day program to increase per-session affiliate revenue. Inventory mapping, A/B placement testing, partner re-negotiation and content-to-commerce flow design. Average uplift: 38% RPM.', tags: ['90 days','Performance fee','+38% RPM avg'] },
+    agency: { eyebrow: 'Flagship engagement', title: 'Practice Build', desc: 'A 6-month program to stand up a billable affiliate practice inside your agency — methodology, IP, talent shadow, first three client retainers. You own the practice; we transition out.', tags: ['6 months','Margin-positive','You own the IP'] },
+    default: { eyebrow: 'Flagship engagement', title: 'The Incrementality Audit', desc: 'Most affiliate programs can\'t answer the question every CFO asks: "is this incremental?". Our flagship 8-week audit answers it with cohort holdouts, baseline modelling and partner-level attribution forensics.', tags: ['8–10 weeks','Board-ready','Evidence-led'] },
+  })[audience] || {};
+
+  const safeNav = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 64, behavior:'smooth'});
+  };
+
+  return (
+    <Section id="services"
+      eyebrow="Services"
+      title={<>Three audiences. <em className="italic">One discipline.</em></>}
+      intro="We work in 8 to 12-week engagements, fixed-fee or retainer. No timesheets. No mystery hours."
+      action={<a href="#book" className="btn btn-ghost" onClick={(e)=>{e.preventDefault(); safeNav('book');}}>All engagements <Icon.Arrow size={14}/></a>}
+    >
+      <div className="svc-row">
+        <div className="svc-card feature">
+          <div>
+            <div className="svc-num">{featureCopy.eyebrow}</div>
+            <h3 className="svc-title serif">{featureCopy.title}</h3>
+            <p className="svc-desc" style={{maxWidth: '52ch', fontSize: 17}}>{featureCopy.desc}</p>
+          </div>
+          <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-end', flexWrap:'wrap', gap: 16}}>
+            <div className="svc-list">
+              {featureCopy.tags && featureCopy.tags.map((t,i)=>(<span className="svc-tag" key={i}>{t}</span>))}
+            </div>
+            <a href="#book" className="btn btn-ghost" style={{borderColor:'rgba(255,255,255,0.18)', color:'var(--bg)'}} onClick={(e)=>{e.preventDefault(); safeNav('book');}}>
+              Scope an engagement <Icon.Arrow size={14}/>
+            </a>
+          </div>
+        </div>
+
+        {list.map(s => (
+          <div key={s.num} className="svc-card">
+            <div>
+              <div className="svc-num">— {s.num}</div>
+              <h3 className="svc-title serif">{s.title}</h3>
+              <p className="svc-desc">{s.desc}</p>
+            </div>
+            <div className="svc-list">
+              {s.tags.map((t,i)=>(<span className="svc-tag" key={i}>{t}</span>))}
+            </div>
+          </div>
+        ))}
+        <div className="svc-card" style={{display:'flex', alignItems:'flex-end', background:'transparent', border:'1px dashed var(--line-2)'}}>
+          <div>
+            <div className="svc-num">— 04</div>
+            <h3 className="svc-title serif">Something else?</h3>
+            <p className="svc-desc">If your problem doesn't map cleanly to the three above, we'll scope a bespoke engagement on a 30-minute call.</p>
+            <a href="#book" className="btn btn-primary btn-sm" style={{marginTop: 24}} onClick={(e)=>{e.preventDefault(); safeNav('book');}}>Book the call <Icon.Arrow size={14}/></a>
+          </div>
+        </div>
+      </div>
+
+      <div className="metric-row" style={{marginTop: 96}}>
+        <div className="metric"><div className="metric-num serif">A$140M+</div><div className="metric-label">Affiliate-driven GMV under management.</div></div>
+        <div className="metric"><div className="metric-num serif">38%</div><div className="metric-label">Average revenue uplift in first 6 months of management.</div></div>
+        <div className="metric"><div className="metric-num serif">12</div><div className="metric-label">Years' combined affiliate leadership across ANZ &amp; APAC.</div></div>
+        <div className="metric"><div className="metric-num serif">100%</div><div className="metric-label">Client retention since founding.</div></div>
+      </div>
+    </Section>
+  );
+}
+window.Services = Services;
+</script>
+
+<!-- Cases -->
+<script type="text/babel">
+function Cases() {
+  const cases = [
+    { brand: 'Southern Cross Travel', tag: 'Travel · ANZ', title: 'From a flat program to 4.2× revenue in 11 months.', art: 'art-stripe-cool', stat: '4.2×', tags: ['Brand', 'Managed Service'], results: [{n:'+312%', l:'YoY revenue'},{n:'2.1×', l:'Active partners'},{n:'12.4%', l:'New customer rate'}] },
+    { brand: 'Sony Australia', tag: 'Consumer Tech', title: 'Rebuilding a category-leading affiliate program post-network migration.', art: 'art-stripe-ink', stat: '11mo', tags: ['Brand', 'Migration'], results: [{n:'0 days', l:'Tracking gap'},{n:'+47%', l:'AOV'},{n:'A$8.4M', l:'Recovered revenue'}] },
+    { brand: 'Pay.com.au', tag: 'Fintech · B2B', title: 'A standing start: launching affiliate as a primary acquisition channel.', art: 'art-stripe-warm', stat: '90 days', tags: ['Brand', 'Build'], results: [{n:'A$0→A$640k', l:'MRR contribution'},{n:'37', l:'Active partners'},{n:'A$184', l:'CAC vs A$420 paid'}] },
+    { brand: 'Linkby', tag: 'Publisher Network', title: 'Editorial-to-commerce: helping a partner triple advertiser intake.', art: 'art-stripe-clay', stat: '3.1×', tags: ['Partner', 'Commercial'], results: [{n:'3.1×', l:'Brief volume'},{n:'+62%', l:'Avg deal size'},{n:'14', l:'New advertiser logos'}] },
+    { brand: 'Money.com.au', tag: 'Comparison · Fin', title: 'Replatforming the partner stack without losing a single dollar.', art: 'art-stripe-sage', stat: '0%', tags: ['Brand', 'Operations'], results: [{n:'0%', l:'Revenue dropoff'},{n:'7 days', l:'Migration window'},{n:'-31%', l:'Network fees'}] },
+    { brand: 'Confidential Agency', tag: 'Indie Media Agency', title: 'Standing up a billable affiliate practice inside an indie agency.', art: 'art-stripe-paper', stat: '6mo', tags: ['Agency', 'Practice Build'], results: [{n:'A$1.1M', l:'New retainer revenue'},{n:'3', l:'New client wins'},{n:'42%', l:'Practice margin'}] },
+  ];
+
+  return (
+    <Section id="cases" className="section-divider"
+      eyebrow="Selected work"
+      title={<>Evidence over <em className="italic">vibes</em>.</>}
+      intro="We measure ourselves on the boring numbers — incremental revenue, partner concentration risk, and CFO-defensibility."
+      action={<a href="#" className="btn btn-ghost">All case studies <Icon.Arrow size={14}/></a>}
+    >
+      <div className="case-grid">
+        {cases.map((c,i) => (
+          <article key={i} className="case-card">
+            <div className={`case-art ${c.art}`}>
+              <div className={`art-overlay ${c.art==='art-stripe-paper' ? 'art-overlay-light' : ''}`}>
+                <div className="art-brand">{c.brand}</div>
+                <div className="art-stat">{c.stat}</div>
+              </div>
+            </div>
+            <div className="case-meta">
+              <div className="case-tagrow">
+                <span className="case-tag">{c.tag}</span>
+                {c.tags.map((t,j)=>(<span className="case-tag" key={j}>{t}</span>))}
+              </div>
+              <h3 className="case-title serif">{c.title}</h3>
+              <div className="case-result">
+                {c.results.map((r,j)=>(
+                  <div key={j}>
+                    <div className="case-result-num serif">{r.n}</div>
+                    <div className="case-result-lbl mono">{r.l}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </Section>
+  );
+}
+window.Cases = Cases;
+</script>
+
+<!-- Health Check -->
+<script type="text/babel">
+function HealthCheck() {
+  const questions = [
+    { id:'partners', q:'How many active affiliate partners drove revenue last quarter?', opts: [{l:'< 5', s:0},{l:'5–20', s:8},{l:'21–75', s:14},{l:'75+', s:18}] },
+    { id:'topshare', q:'What share of affiliate revenue comes from your top 3 partners?', opts: [{l:'>80% — concentrated', s:2},{l:'60–80%', s:8},{l:'40–60%', s:14},{l:'<40% — diversified', s:18}] },
+    { id:'incrementality', q:'When did you last test program incrementality?', opts: [{l:'Never', s:0},{l:'>2 years ago', s:5},{l:'In the last year', s:14},{l:'Quarterly', s:18}] },
+    { id:'reporting', q:'How often does affiliate get a CFO-grade report?', opts: [{l:'Network dashboard only', s:2},{l:'Quarterly summary', s:8},{l:'Monthly board pack', s:14},{l:'Real-time + monthly', s:18}] },
+    { id:'mix', q:'Which partner types are live right now?', opts: [{l:'Cashback only', s:4},{l:'Cashback + Coupon', s:8},{l:'CB + Coupon + Content', s:14},{l:'Diversified inc. influencer & B2B', s:18}] },
+    { id:'commission', q:'When did you last review commission structure?', opts: [{l:'Never reviewed', s:0},{l:'> 18 months', s:5},{l:'< 12 months', s:14},{l:'Tiered + dynamic', s:18}] },
+  ];
+
+  const [step, setStep] = React.useState(0);
+  const [answers, setAnswers] = React.useState({});
+  const [done, setDone] = React.useState(false);
+  const [emailed, setEmailed] = React.useState(false);
+  const [email, setEmail] = React.useState('');
+
+  const total = questions.length;
+  const progress = done ? 100 : (step / total) * 100;
+  const score = Object.values(answers).reduce((a,b)=>a+(b||0),0);
+  const max = questions.length * 18;
+  const pct = Math.round((score / max) * 100);
+
+  const grade = pct >= 80 ? { l: 'Best in class', color: 'oklch(0.55 0.13 145)' }
+              : pct >= 60 ? { l: 'Solid, with gaps', color: 'var(--accent)' }
+              : pct >= 40 ? { l: 'Underperforming', color: 'oklch(0.65 0.13 60)' }
+              : { l: 'Critical risk', color: 'oklch(0.55 0.16 28)' };
+
+  const breakdowns = questions.map(q => ({
+    label: ({partners:'Partner volume', topshare:'Concentration risk', incrementality:'Incrementality discipline', reporting:'Reporting maturity', mix:'Partner mix diversity', commission:'Commission hygiene'})[q.id],
+    pct: Math.round(((answers[q.id] || 0) / 18) * 100),
+  }));
+
+  const select = (q, optS) => {
+    setAnswers(a => ({ ...a, [q.id]: optS }));
+    setTimeout(() => {
+      if (step < total - 1) setStep(s => s+1);
+      else setDone(true);
+    }, 220);
+  };
+
+  const reset = () => { setStep(0); setAnswers({}); setDone(false); setEmailed(false); };
+
+  if (done) {
+    const C = 2 * Math.PI * 100;
+    return (
+      <div className="tool-shell fade-in">
+        <div className="tool-head">
+          <div className="left">
+            <span className="tool-pill">Health Check · Result</span>
+            <span className="muted" style={{fontSize:13}}>Took ~90 seconds</span>
+          </div>
+          <button className="btn btn-ghost btn-sm" onClick={reset}>Retake</button>
+        </div>
+        <div className="tool-progress"><div style={{width:'100%'}}/></div>
+        <div style={{padding: '56px', display:'grid', gridTemplateColumns:'320px 1fr', gap: 64, alignItems:'start'}}>
+          <div style={{display:'flex', flexDirection:'column', alignItems:'flex-start', gap: 24}}>
+            <div className="score-ring">
+              <svg width="240" height="240">
+                <circle cx="120" cy="120" r="100" fill="none" strokeWidth="12" className="ring-bg"/>
+                <circle cx="120" cy="120" r="100" fill="none" strokeWidth="12" strokeLinecap="round"
+                        className="ring-fg" style={{stroke: grade.color}}
+                        strokeDasharray={C} strokeDashoffset={C - (C * pct/100)}/>
+              </svg>
+              <div className="score-num serif">{pct}<small>/100</small></div>
+            </div>
+            <span className="score-grade" style={{background: `color-mix(in oklab, ${grade.color} 14%, transparent)`, color: grade.color}}>● {grade.l}</span>
+            <p className="muted" style={{fontSize:14}}>Benchmark: programs scoring 65+ typically run 22–40% more efficient than peer average.</p>
+          </div>
+          <div>
+            <div className="eyebrow">Breakdown by dimension</div>
+            <div style={{marginTop: 16}}>
+              {breakdowns.map((b,i) => (
+                <div key={i} className="breakdown-row">
+                  <div style={{fontSize:14}}>{b.label}</div>
+                  <div className="bar-track">
+                    <div className={'bar-fill ' + (b.pct < 40 ? 'bad' : b.pct < 70 ? 'warn' : '')} style={{width: b.pct + '%'}}/>
+                  </div>
+                  <div className="mono" style={{fontSize:12, textAlign:'right'}}>{b.pct}%</div>
+                </div>
+              ))}
+            </div>
+            <div style={{marginTop: 32, padding: 20, background:'var(--bg-2)', borderRadius:'var(--r-md)'}}>
+              <div className="eyebrow">Recommended next step</div>
+              <p style={{marginTop: 10, fontSize:15, color:'var(--ink-2)'}}>
+                {pct < 60
+                  ? 'You\'re likely leaving 25–45% of program upside on the table. Start with a Program Audit — a 6-week diagnostic that produces a board-ready remediation plan.'
+                  : 'You\'re in the upper quartile. The leverage now is incrementality testing and partner mix optimisation — talk to us about an Incrementality Audit.'}
+              </p>
+            </div>
+            {!emailed ? (
+              <form onSubmit={(e)=>{e.preventDefault(); setEmailed(true);}} style={{marginTop: 24, display:'flex', gap: 8}}>
+                <input placeholder="you@company.com" type="email" required value={email} onChange={e=>setEmail(e.target.value)}
+                       style={{flex:1, padding:'14px 18px', border:'1px solid var(--line-2)', borderRadius:999, background:'var(--paper)', color:'var(--ink)', fontFamily:'inherit', fontSize:15}}/>
+                <button className="btn btn-primary" type="submit">Email me the full report <Icon.Arrow size={14}/></button>
+              </form>
+            ) : (
+              <div style={{marginTop: 24, padding:16, background:'var(--accent-soft)', color:'var(--accent-ink)', borderRadius:'var(--r-md)', display:'flex', gap:10, alignItems:'center'}}>
+                <Icon.Check size={18}/> Sent to <strong>{email}</strong>. We'll also include a peer-comparison addendum.
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const q = questions[step];
+  return (
+    <div className="tool-shell">
+      <div className="tool-head">
+        <div className="left">
+          <span className="tool-pill">Health Check</span>
+          <span className="muted" style={{fontSize:13}}>~90 seconds · 6 questions · No signup to see your score</span>
+        </div>
+        <div className="mono" style={{fontSize:12, color:'var(--ink-3)'}}>{step+1} of {total}</div>
+      </div>
+      <div className="tool-progress"><div style={{width: progress+'%'}}/></div>
+      <div className="tool-body">
+        <div>
+          <div className="q-step-label">Question {String(step+1).padStart(2,'0')} / {String(total).padStart(2,'0')}</div>
+          <h3 className="q-text serif">{q.q}</h3>
+        </div>
+        <div className="q-options">
+          {q.opts.map((o,i) => {
+            const sel = answers[q.id] === o.s;
+            return (
+              <button key={i} className={`q-opt ${sel?'selected':''}`} onClick={()=>select(q,o.s)}>
+                <span>{o.l}</span>
+                <span className="q-opt-mark"></span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+      <div className="tool-foot">
+        <button className="btn btn-ghost btn-sm" disabled={step===0} onClick={()=>setStep(s=>Math.max(0,s-1))}>
+          <Icon.ChevL size={14}/> Back
+        </button>
+        <div style={{display:'flex', gap:6}}>
+          {questions.map((_,i)=>(
+            <span key={i} style={{width:6, height:6, borderRadius:'50%', background: i<=step?'var(--ink)':'var(--line-2)'}}/>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+window.HealthCheck = HealthCheck;
+</script>
+
+<!-- Calculator -->
+<script type="text/babel">
+function Calculator() {
+  const [revenue, setRevenue] = React.useState(8000000);
+  const [affShare, setAffShare] = React.useState(4);
+  const [margin, setMargin] = React.useState(38);
+  const [tier, setTier] = React.useState('audit');
+
+  const tierCfg = {
+    audit: { label: 'Audit only', uplift: 0.18, fee: 48000, term: '8 weeks' },
+    managed: { label: 'Managed Service', uplift: 0.42, fee: 12000, term: '/ month, min 6mo' },
+    growth: { label: 'Growth Sprint', uplift: 0.65, fee: 95000, term: '/ quarter' },
+  };
+  const cfg = tierCfg[tier];
+  const currentAffRev = revenue * (affShare / 100);
+  const upliftRev = currentAffRev * cfg.uplift;
+  const upliftMargin = upliftRev * (margin / 100);
+  const fee = tier === 'managed' ? cfg.fee * 6 : cfg.fee;
+  const roi = upliftMargin / fee;
+  const payback = fee / (upliftMargin / 12);
+
+  const fmt = (n) => {
+    if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return Math.round(n/1e3) + 'k';
+    return Math.round(n).toString();
+  };
+
+  const safeNav = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 64, behavior:'smooth'});
+  };
+
+  return (
+    <div className="tool-shell">
+      <div className="tool-head">
+        <div className="left">
+          <span className="tool-pill">Revenue Calculator</span>
+          <span className="muted" style={{fontSize:13}}>Estimates based on 38 ANZ programs we've audited 2022–2025</span>
+        </div>
+      </div>
+      <div className="calc-grid">
+        <div className="calc-inputs">
+          <div className="input-group">
+            <div className="input-label">
+              <span className="input-label-text">Annual ecommerce revenue</span>
+              <span className="input-value serif">A${fmt(revenue)}</span>
+            </div>
+            <input type="range" className="slider" min="500000" max="100000000" step="500000" value={revenue} onChange={e=>setRevenue(+e.target.value)}/>
+            <div className="input-help">Just the digital, direct-to-consumer line.</div>
+          </div>
+          <div className="input-group">
+            <div className="input-label">
+              <span className="input-label-text">Current affiliate share of revenue</span>
+              <span className="input-value serif">{affShare}%</span>
+            </div>
+            <input type="range" className="slider" min="0" max="20" step="0.5" value={affShare} onChange={e=>setAffShare(+e.target.value)}/>
+            <div className="input-help">ANZ retail benchmark sits at 6–9%. Below 4% suggests a meaningful gap.</div>
+          </div>
+          <div className="input-group">
+            <div className="input-label">
+              <span className="input-label-text">Contribution margin</span>
+              <span className="input-value serif">{margin}%</span>
+            </div>
+            <input type="range" className="slider" min="10" max="80" step="1" value={margin} onChange={e=>setMargin(+e.target.value)}/>
+            <div className="input-help">Gross margin minus variable fulfilment. Used to convert revenue uplift to true contribution.</div>
+          </div>
+          <div className="input-group">
+            <div className="input-label"><span className="input-label-text">Engagement type</span></div>
+            <div className="seg" style={{marginTop: 4}}>
+              {Object.entries(tierCfg).map(([k,v]) => (
+                <button key={k} className={tier===k?'active':''} onClick={()=>setTier(k)}>{v.label}</button>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="calc-output">
+          <div>
+            <div className="eyebrow" style={{color:'var(--ink-5)'}}>Year-one contribution uplift</div>
+            <div className="calc-out-num serif" style={{marginTop: 16}}>
+              <span className="calc-out-currency">A$</span>{fmt(upliftMargin)}
+            </div>
+            <p style={{color:'var(--ink-5)', fontSize:14, marginTop: 16, maxWidth: '34ch'}}>
+              On A${fmt(currentAffRev)} of current affiliate revenue, a {Math.round(cfg.uplift*100)}% uplift translates to A${fmt(upliftRev)} additional revenue and A${fmt(upliftMargin)} contribution at {margin}% margin.
+            </p>
+          </div>
+          <div className="calc-out-mini">
+            <div><div className="lbl">Engagement fee</div><div className="val serif">A${fmt(fee)}</div></div>
+            <div><div className="lbl">Year-one ROI</div><div className="val serif">{roi.toFixed(1)}×</div></div>
+            <div><div className="lbl">Payback</div><div className="val serif">{payback < 1 ? '< 1 mo' : Math.round(payback) + ' mo'}</div></div>
+          </div>
+          <div style={{marginTop:24, display:'flex', gap:12, flexWrap:'wrap'}}>
+            <a href="#book" className="btn btn-accent" onClick={(e)=>{e.preventDefault(); safeNav('book');}}>Pressure-test this number with us <Icon.Arrow size={14}/></a>
+            <a href="#playbook" className="btn btn-ghost" style={{borderColor:'rgba(255,255,255,0.18)', color:'var(--bg)'}} onClick={(e)=>{e.preventDefault(); safeNav('playbook');}}>
+              Methodology PDF <Icon.Download size={14}/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+window.Calculator = Calculator;
+</script>
+
+<!-- Insights -->
+<script type="text/babel">
+function Insights() {
+  const items = [
+    { tag: 'Frameworks', title: 'The Incrementality Question every CFO will eventually ask.', meta: ['9 min read', 'Cal Lewis'], featured: true },
+    { tag: 'Field notes', title: 'Why ANZ affiliate is structurally different from US benchmarks.', meta: ['6 min read', 'Nimesh Patel'] },
+    { tag: 'Playbook', title: 'A 90-day plan for migrating networks without losing revenue.', meta: ['12 min read', 'Cal Lewis'] },
+    { tag: 'Data', title: 'Partner concentration: when "top 3 = 80%" is a feature, not a bug.', meta: ['7 min read', 'CAm. Research'] },
+  ];
+  return (
+    <Section id="insights" className="section-divider"
+      eyebrow="Field notes"
+      title={<>Writing on what's <em className="italic">actually</em> changing.</>}
+      intro="No reposted LinkedIn carousels. Original frameworks from active engagements, written for operators."
+      action={<a href="#" className="btn btn-ghost">All writing <Icon.Arrow size={14}/></a>}
+    >
+      <div className="insight-grid">
+        {items.map((it, i) => (
+          <article key={i} className={'insight-card ' + (it.featured ? 'feature' : (i%2===1?'s':'m'))}>
+            <div>
+              <span className="insight-tag">— {it.tag}</span>
+              <h3 className="insight-h serif">{it.title}</h3>
+            </div>
+            <div className="insight-meta">
+              <span>{it.meta[0]}</span>
+              <span className="divider-dot">·</span>
+              <span>{it.meta[1]}</span>
+              <span style={{marginLeft:'auto'}}><Icon.ArrowUR size={16}/></span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </Section>
+  );
+}
+window.Insights = Insights;
+</script>
+
+<!-- Team -->
+<script type="text/babel">
+function Team() {
+  return (
+    <Section id="team" className="section-divider"
+      eyebrow="Founders"
+      title={<>Two operators. <em className="italic">No layers.</em></>}
+      intro="Cal and Nims have spent the last decade running affiliate at the brand, network and agency side. Every engagement is led by one of them — not handed to a junior."
+    >
+      <div className="team-grid">
+        <article className="team-card">
+          <div className="team-portrait" style={{background:'radial-gradient(circle at 50% 35%, oklch(0.78 0.05 40), oklch(0.62 0.08 32) 60%, oklch(0.42 0.06 30))'}}>
+            <span className="ph-label">Portrait · Callum</span>
+          </div>
+          <div className="team-info">
+            <div className="team-name serif">Callum Lewis</div>
+            <div className="team-role mono">Co-founder · Brand &amp; agency engagements</div>
+            <p className="team-bio">Previously led affiliate for a top-5 ANZ media agency across Disney+, Amex, Foxtel, Aus Post and Nespresso. Built CAm. to do the work the way clients actually want it done.</p>
+          </div>
+        </article>
+        <article className="team-card">
+          <div className="team-portrait" style={{background:'radial-gradient(circle at 50% 35%, oklch(0.76 0.06 60), oklch(0.58 0.09 50) 60%, oklch(0.38 0.07 40))'}}>
+            <span className="ph-label">Portrait · Nimesh</span>
+          </div>
+          <div className="team-info">
+            <div className="team-name serif">Nimesh Patel</div>
+            <div className="team-role mono">Co-founder · Partner &amp; commercial work</div>
+            <p className="team-bio">Spent the last decade building publisher commercial models, including three years on the Amex affiliate book. Runs CAm.'s partner-side practice.</p>
+          </div>
+        </article>
+      </div>
+    </Section>
+  );
+}
+window.Team = Team;
+</script>
+
+<!-- Booking -->
+<script type="text/babel">
+function Booking() {
+  const [step, setStep] = React.useState(0);
+  const [topic, setTopic] = React.useState('');
+  const [day, setDay] = React.useState(null);
+  const [slot, setSlot] = React.useState('');
+  const [form, setForm] = React.useState({name:'', email:'', company:'', notes:''});
+  const [submitted, setSubmitted] = React.useState(false);
+
+  const topics = [
+    { id:'audit', label:'Program Audit', desc:'Diagnostic, 6–8 weeks, fixed fee.' },
+    { id:'managed', label:'Managed Service', desc:'Ongoing program management.' },
+    { id:'partner', label:'Partner Monetisation', desc:'Publishers looking for brand intros.' },
+    { id:'agency', label:'Agency White-label', desc:'Affiliate execution under your agency brand.' },
+    { id:'other', label:'Something else', desc:'30 minutes, no agenda — we\'ll work it out.' },
+  ];
+  const slots = ['09:00','09:30','10:00','10:30','11:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30'];
+  const monthName = 'May 2026';
+  const monthDays = 31;
+  const firstWeekday = 5;
+  const today = 4;
+  const cells = [];
+  for (let i=0;i<firstWeekday;i++) cells.push({outside:true});
+  for (let d=1;d<=monthDays;d++) {
+    const dayOfWeek = (firstWeekday + d - 1) % 7;
+    const isWeekend = dayOfWeek===0 || dayOfWeek===6;
+    const isPast = d < today;
+    cells.push({d, available: !isWeekend && !isPast, disabled: isWeekend || isPast, today: d===today});
+  }
+  const trail = (7 - (cells.length % 7)) % 7;
+  for (let i=0;i<trail;i++) cells.push({outside:true});
+
+  const next = () => setStep(s=>s+1);
+  const prev = () => setStep(s=>Math.max(0,s-1));
+  const submit = (e) => { e.preventDefault(); setSubmitted(true); };
+
+  const safeNav = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 64, behavior:'smooth'});
+  };
+
+  if (submitted) {
+    return (
+      <div className="tool-shell fade-in" style={{padding: 64, textAlign:'center'}}>
+        <div style={{display:'inline-flex', width:64, height:64, borderRadius:'50%', background:'var(--accent-soft)', color:'var(--accent-ink)', alignItems:'center', justifyContent:'center', marginBottom: 24}}>
+          <Icon.Check size={28}/>
+        </div>
+        <h3 className="serif" style={{fontSize:44, lineHeight:1, maxWidth:'18ch', margin:'0 auto'}}>You're in. We'll see you on {day} {monthName.split(' ')[0]} at {slot}.</h3>
+        <p className="lead" style={{margin:'24px auto 0', fontSize:18}}>Calendar invite + Zoom link is on its way to <strong>{form.email}</strong>. We'll also send a short pre-read so the call is useful from minute one.</p>
+        <div style={{marginTop:32, display:'flex', gap:12, justifyContent:'center'}}>
+          <a href="#playbook" className="btn btn-ghost" onClick={(e)=>{e.preventDefault(); safeNav('playbook');}}>Grab the playbook while you wait <Icon.Download size={14}/></a>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="tool-shell">
+      <div className="tool-head">
+        <div className="left">
+          <span className="tool-pill">Book a call</span>
+          <span className="muted" style={{fontSize:13}}>30 minutes · Cal or Nims · No sales pitch</span>
+        </div>
+      </div>
+      <div className="tool-progress"><div style={{width: ((step+1)/4)*100 + '%'}}/></div>
+      <div className="book-grid">
+        <div className="book-side">
+          <div>
+            <div className="eyebrow">Your call</div>
+            {[{n:'01', l:'Topic'},{n:'02', l:'Date & time'},{n:'03', l:'Your details'},{n:'04', l:'Confirm'}].map((s,i)=>(
+              <div key={i} className={`book-step-row book-step ${i<step?'done':''} ${i===step?'active':''}`}>
+                <div className="book-step-num">{i<step ? <Icon.Check size={12}/> : s.n}</div>
+                <div className="book-step-label">{s.l}</div>
+              </div>
+            ))}
+            <div className="book-summary">
+              <div className="row"><span>Topic</span><span>{topic ? topics.find(t=>t.id===topic).label : '—'}</span></div>
+              <div className="row"><span>When</span><span>{day ? `${day} ${monthName.split(' ')[0]} · ${slot||'—'}` : '—'}</span></div>
+              <div className="row"><span>Lead</span><span>{topic==='partner' ? 'Nimesh' : 'Cal'}</span></div>
+              <div className="row"><span>Duration</span><span>30 min</span></div>
+            </div>
+          </div>
+          <p className="muted" style={{fontSize:12}}>By booking you agree to our <a href="#" style={{textDecoration:'underline'}}>privacy notice</a>. We never share details with third parties.</p>
+        </div>
+        <div className="book-stage">
+          {step === 0 && (
+            <div className="fade-in">
+              <h4 className="serif" style={{fontSize:32, margin:0}}>What should we talk about?</h4>
+              <p className="muted" style={{marginTop:6, fontSize:14}}>Pick the closest fit — we'll route you to whoever's best placed.</p>
+              <div style={{display:'grid', gap:10, marginTop:24}}>
+                {topics.map(t => (
+                  <button key={t.id} className={`q-opt ${topic===t.id?'selected':''}`} onClick={()=>{setTopic(t.id); setTimeout(next, 200);}}>
+                    <span><strong>{t.label}</strong> <span style={{opacity:0.6, marginLeft:8}}>· {t.desc}</span></span>
+                    <span className="q-opt-mark"></span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          {step === 1 && (
+            <div className="fade-in">
+              <div style={{display:'flex', justifyContent:'space-between', alignItems:'baseline'}}>
+                <h4 className="serif" style={{fontSize:28, margin:0}}>{monthName}</h4>
+                <span className="muted mono" style={{fontSize:11}}>AEST · GMT+10</span>
+              </div>
+              <div className="cal-grid" style={{marginTop:16}}>
+                {['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d => <div key={d} className="cal-day-h">{d}</div>)}
+                {cells.map((c,i) => {
+                  if (c.outside) return <div key={i}/>;
+                  const cls = ['cal-day'];
+                  if (c.disabled) cls.push('disabled');
+                  if (c.available) cls.push('available');
+                  if (day === c.d) cls.push('selected');
+                  if (c.today) cls.push('today');
+                  return (
+                    <button key={i} className={cls.join(' ')} disabled={c.disabled} onClick={()=>setDay(c.d)}>{c.d}</button>
+                  );
+                })}
+              </div>
+              {day && (
+                <div style={{marginTop:24}}>
+                  <div className="eyebrow">Available slots · {day} {monthName.split(' ')[0]}</div>
+                  <div className="slot-grid" style={{marginTop:12}}>
+                    {slots.map(s => (
+                      <button key={s} className={`slot-btn ${slot===s?'selected':''}`} onClick={()=>setSlot(s)}>{s}</button>
+                    ))}
+                  </div>
+                </div>
+              )}
+              <div style={{marginTop:24, display:'flex', justifyContent:'space-between'}}>
+                <button className="btn btn-ghost btn-sm" onClick={prev}><Icon.ChevL size={14}/> Back</button>
+                <button className="btn btn-primary" disabled={!day || !slot} onClick={next} style={{opacity:(!day||!slot)?0.5:1}}>Continue <Icon.Arrow size={14}/></button>
+              </div>
+            </div>
+          )}
+          {step === 2 && (
+            <form className="fade-in" onSubmit={(e)=>{e.preventDefault(); next();}}>
+              <h4 className="serif" style={{fontSize:32, margin:0}}>A few quick details</h4>
+              <p className="muted" style={{marginTop:6, fontSize:14}}>So we can prep something useful for the call.</p>
+              <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:14, marginTop:24}}>
+                <div className="field"><label>Name</label><input required value={form.name} onChange={e=>setForm({...form, name:e.target.value})}/></div>
+                <div className="field"><label>Work email</label><input type="email" required value={form.email} onChange={e=>setForm({...form, email:e.target.value})}/></div>
+                <div className="field" style={{gridColumn:'span 2'}}><label>Company</label><input required value={form.company} onChange={e=>setForm({...form, company:e.target.value})}/></div>
+                <div className="field" style={{gridColumn:'span 2'}}><label>What's top of mind? (optional)</label><textarea rows="3" value={form.notes} onChange={e=>setForm({...form, notes:e.target.value})}/></div>
+              </div>
+              <div style={{display:'flex', justifyContent:'space-between'}}>
+                <button type="button" className="btn btn-ghost btn-sm" onClick={prev}><Icon.ChevL size={14}/> Back</button>
+                <button className="btn btn-primary" type="submit">Review <Icon.Arrow size={14}/></button>
+              </div>
+            </form>
+          )}
+          {step === 3 && (
+            <div className="fade-in">
+              <h4 className="serif" style={{fontSize:32, margin:0}}>Looks good?</h4>
+              <p className="muted" style={{marginTop:6, fontSize:14}}>One click and you're booked.</p>
+              <div style={{marginTop:24, padding:24, background:'var(--bg-2)', borderRadius:'var(--r-md)', display:'grid', gap:10}}>
+                <div style={{display:'flex', justifyContent:'space-between'}}><span className="muted mono" style={{fontSize:11}}>TOPIC</span><span>{topics.find(t=>t.id===topic)?.label}</span></div>
+                <div style={{display:'flex', justifyContent:'space-between'}}><span className="muted mono" style={{fontSize:11}}>WHEN</span><span>{day} {monthName.split(' ')[0]} 2026 · {slot} AEST</span></div>
+                <div style={{display:'flex', justifyContent:'space-between'}}><span className="muted mono" style={{fontSize:11}}>WITH</span><span>{topic==='partner' ? 'Nimesh Patel' : 'Callum Lewis'}</span></div>
+                <div style={{display:'flex', justifyContent:'space-between'}}><span className="muted mono" style={{fontSize:11}}>EMAIL</span><span>{form.email}</span></div>
+              </div>
+              <div style={{marginTop:24, display:'flex', justifyContent:'space-between'}}>
+                <button className="btn btn-ghost btn-sm" onClick={prev}><Icon.ChevL size={14}/> Back</button>
+                <button className="btn btn-accent" onClick={submit}>Confirm booking <Icon.Check size={14}/></button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+window.Booking = Booking;
+</script>
+
+<!-- Playbook -->
+<script type="text/babel">
+function Playbook() {
+  const [email, setEmail] = React.useState('');
+  const [audience, setAudience] = React.useState('brand');
+  const [done, setDone] = React.useState(false);
+
+  return (
+    <Section id="playbook" className="section-divider"
+      eyebrow="Resource"
+      title={<>The Affiliate Operator's <em className="italic">Field Manual</em>.</>}
+      intro="64 pages on running an ANZ affiliate program in 2026 — partner mix benchmarks, commission frameworks, incrementality methodology, audit checklists."
+    >
+      <div className="playbook-card">
+        <div className="playbook-content">
+          <div className="eyebrow eyebrow-dot">Free · 64 pages · PDF</div>
+          <h3 className="serif" style={{fontSize: 56, lineHeight: 0.98, marginTop: 24, letterSpacing:'-0.02em'}}>
+            Everything we wish we'd been given on day one.
+          </h3>
+          <p className="lead" style={{marginTop: 24}}>
+            We pulled together every framework, benchmark, and post-mortem from our last 38 engagements. Real numbers, real partner mix, real commission structures — anonymised, indexed, ready to lift.
+          </p>
+          <div style={{marginTop: 32}}>
+            <div className="eyebrow" style={{marginBottom:12}}>What's inside</div>
+            <ul style={{listStyle:'none', padding:0, margin:0, display:'grid', gap:8}}>
+              {['Partner mix benchmarks by vertical (retail, fintech, travel, services)',
+                'Commission structure frameworks — flat, tiered, dynamic, hybrid',
+                'Incrementality testing methodology with cohort holdout templates',
+                'A 90-day program migration playbook',
+                'Network selection scoring matrix (we score the big four)'].map((t,i)=>(
+                <li key={i} style={{display:'flex', gap:10, alignItems:'flex-start', fontSize:14, color:'var(--ink-2)'}}>
+                  <Icon.Check size={16}/> {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+          {!done ? (
+            <form onSubmit={(e)=>{e.preventDefault(); setDone(true);}} style={{marginTop:32}}>
+              <div className="field"><label>Work email</label>
+                <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@company.com"/>
+              </div>
+              <div className="field"><label>I'm a…</label>
+                <div className="seg" style={{display:'flex'}}>
+                  {[{k:'brand',l:'Brand'},{k:'partner',l:'Partner'},{k:'agency',l:'Agency'}].map(o=>(
+                    <button type="button" key={o.k} className={audience===o.k?'active':''} onClick={()=>setAudience(o.k)}>{o.l}</button>
+                  ))}
+                </div>
+              </div>
+              <button className="btn btn-accent btn-lg" type="submit" style={{marginTop:8}}>
+                Email me the playbook <Icon.Download size={16}/>
+              </button>
+              <p className="dim" style={{fontSize:12, marginTop:12}}>One email, no spam, unsubscribe in one click.</p>
+            </form>
+          ) : (
+            <div className="fade-in" style={{marginTop:32, padding:20, background:'var(--accent-soft)', color:'var(--accent-ink)', borderRadius:'var(--r-md)', display:'flex', gap:12}}>
+              <Icon.Check size={20}/>
+              <div>
+                <strong>Sent to {email}.</strong>
+                <div style={{fontSize:14, marginTop:4}}>You'll also get a {audience}-specific addendum — different sample programs and benchmarks.</div>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="playbook-cover">
+          <div className="playbook-spine"></div>
+          <div className="playbook-doc">
+            <div className="pb-eyebrow">Commerce Amplified · 2026</div>
+            <h4 className="serif" style={{marginTop: 16}}>The Affiliate Operator's Field Manual</h4>
+            <div className="pb-rules">
+              <div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div style={{position:'absolute', bottom:24, left:24, right:24, display:'flex', justifyContent:'space-between', alignItems:'baseline'}}>
+              <span className="mono" style={{fontSize:10, color:'var(--ink-3)', letterSpacing:'0.1em'}}>EDITION 04 · 64 PP.</span>
+              <span className="serif" style={{fontSize: 28}}>CAm<span style={{color:'var(--accent)'}}>.</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
+}
+window.Playbook = Playbook;
+</script>
+
+<!-- Footer -->
+<script type="text/babel">
+function Footer() {
+  return (
+    <footer className="cam-footer">
+      <div className="wrap">
+        <div className="cam-footer-grid">
+          <div>
+            <div className="cam-logo" style={{color:'var(--bg)', fontSize: 32}}>CAm<span className="dot">.</span></div>
+            <p style={{color:'var(--ink-3)', maxWidth:'42ch', marginTop:16, fontSize:15}}>
+              An independent affiliate &amp; partnerships consultancy. Sydney + Melbourne. Working with brands, partners and agencies across ANZ.
+            </p>
+            <div style={{marginTop:24, display:'flex', gap:12}}>
+              <a href="#book" className="btn btn-sm" style={{background:'var(--bg)', color:'var(--ink)'}}>Book a call <Icon.Arrow size={14}/></a>
+            </div>
+          </div>
+          <div>
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">For Brands</a></li>
+              <li><a href="#services">For Partners</a></li>
+              <li><a href="#services">For Agencies</a></li>
+              <li><a href="#services">Incrementality Audit</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <ul>
+              <li><a href="#tools">Health Check</a></li>
+              <li><a href="#tools">Revenue Calculator</a></li>
+              <li><a href="#playbook">Field Manual</a></li>
+              <li><a href="#insights">Field Notes</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#cases">Case Studies</a></li>
+              <li><a href="#book">Contact</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="cam-footer-mega serif">CAm<span style={{color:'var(--accent)'}}>.</span></div>
+        <div className="cam-footer-bot">
+          <span>© Commerce Amplified Pty Ltd · ABN 12 345 678 901</span>
+          <span>Sydney · Melbourne · ANZ</span>
+          <span><a href="#">Privacy</a> · <a href="#">Terms</a></span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+window.Footer = Footer;
+</script>
+
+<!-- App -->
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+function App() {
+  const [audience, setAudience] = useState('default');
+  const t = window.CAM_TWEAKS;
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.dataset.bgtone = t.bgTone || 'cream';
+    root.dataset.density = t.density || 'comfortable';
+    const hue = t.accentHue ?? 35;
+    const sat = t.accentSat ?? 0.11;
+    root.style.setProperty('--accent', `oklch(0.55 ${sat} ${hue})`);
+    root.style.setProperty('--accent-soft', `oklch(0.94 ${Math.max(0.02, sat*0.4)} ${hue})`);
+    root.style.setProperty('--accent-ink', `oklch(0.30 ${sat*0.85} ${hue})`);
+    root.style.setProperty('--display-font', `'${t.displayFont || 'Instrument Serif'}'`);
+  }, []);
+
+  const safeNav = (id) => {
+    const el = id === 'top' ? document.body : document.getElementById(id);
+    if (!el) return;
+    const y = id === 'top' ? 0 : el.getBoundingClientRect().top + window.scrollY - 64;
+    window.scrollTo({top: y, behavior:'smooth'});
+  };
+
+  return (
+    <>
+      <Header active={audience} onNav={safeNav}/>
+      <main>
+        <Hero audience={audience} setAudience={setAudience}/>
+        <Services audience={audience}/>
+        <Cases/>
+
+        <section id="tools" className="section section-divider">
+          <div className="wrap">
+            <div className="section-title-row">
+              <div>
+                <div className="eyebrow eyebrow-dot">Lead-gen tools</div>
+                <h2 className="h-1 serif" style={{marginTop:18, maxWidth:'18ch'}}>
+                  Two tools to <em className="italic">stress-test</em> your program before we ever talk.
+                </h2>
+                <p className="lead" style={{marginTop:24}}>
+                  Most consultancies hide their methodology behind a sales call. We don't. Run these yourself, see what falls out, and decide if a conversation is warranted.
+                </p>
+              </div>
+            </div>
+            <div style={{display:'grid', gap: 32}}>
+              <HealthCheck/>
+              <Calculator/>
+            </div>
+          </div>
+        </section>
+
+        <Insights/>
+        <Team/>
+
+        <section id="book" className="section section-divider">
+          <div className="wrap">
+            <div className="section-title-row">
+              <div>
+                <div className="eyebrow eyebrow-dot">Book a call</div>
+                <h2 className="h-1 serif" style={{marginTop:18, maxWidth:'18ch'}}>
+                  Thirty minutes with <em className="italic">an actual operator</em>.
+                </h2>
+                <p className="lead" style={{marginTop:24}}>
+                  No SDR. No qualification questions. You'll talk to Cal or Nims directly — and either leave with something useful, or politely told this isn't the right fit.
+                </p>
+              </div>
+            </div>
+            <Booking/>
+          </div>
+        </section>
+
+        <Playbook/>
+
+        <section className="section" style={{paddingTop: 60, paddingBottom: 40}}>
+          <div className="wrap" style={{textAlign:'center'}}>
+            <h2 className="serif" style={{fontSize:'clamp(48px, 8vw, 120px)', lineHeight: 0.95, letterSpacing:'-0.025em', maxWidth:'18ch', margin:'0 auto'}}>
+              Partnerships, done <em className="italic">properly</em>.
+            </h2>
+            <div style={{marginTop:40, display:'flex', gap:12, justifyContent:'center', flexWrap:'wrap'}}>
+              <a href="#book" className="btn btn-lg btn-primary" onClick={(e)=>{e.preventDefault(); safeNav('book');}}>Book a call <Icon.Arrow size={16}/></a>
+              <a href="#tools" className="btn btn-lg btn-ghost" onClick={(e)=>{e.preventDefault(); safeNav('tools');}}>Run a tool first</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer/>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
