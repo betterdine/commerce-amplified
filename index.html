@@ -100,8 +100,8 @@ section { position: relative; }
 .cam-logo { display: inline-flex; align-items: baseline; gap: 2px; font-family: var(--display-font); font-size: 26px; letter-spacing: -0.02em; }
 .cam-logo .dot { color: var(--accent); }
 .cam-nav { display: flex; gap: 32px; align-items: center; }
-.cam-nav a { font-size: 14px; color: var(--ink-2); }
-.cam-nav a:hover { color: var(--ink); }
+.cam-nav a:not(.btn) { font-size: 14px; color: var(--ink-2); }
+.cam-nav a:not(.btn):hover { color: var(--ink); }
 
 .hero { padding-top: 80px; padding-bottom: 0; }
 .hero-marquee { display: flex; gap: 56px; align-items: center; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent); }
